@@ -1,6 +1,3 @@
-
-
-
 const STATUS = document.getElementById('status');
 const VIDEO = document.getElementById('webcam');
 const ENABLE_CAM_BUTTON = document.getElementById('enableCam');
@@ -43,7 +40,7 @@ let predict = false;
 async function loadMobileNetFeatureModel() {
   const URL = 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
   mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
-  STATUS.innerText = 'MobileNet v3 loaded successfully!';
+  STATUS.innerText = 'Api Chargé avec success';
   
   // Warm up the model by passing zeros through it once.
   tf.tidy(function () {
@@ -209,7 +206,7 @@ function predictLoop() {
       let prediction = model.predict(imageFeatures.expandDims()).squeeze();
       let highestIndex = prediction.argMax().arraySync();
       let predictionArray = prediction.arraySync();
-      STATUS.innerText = 'Prediction: ' + CLASS_NAMES[highestIndex] + ' with ' + Math.floor(predictionArray[highestIndex] * 100) + '% exactitude';
+      STATUS.innerText = 'Prediction: ' + CLASS_NAMES[highestIndex] + ' pour ' + Math.floor(predictionArray[highestIndex] * 100) + '% exactitude';
     });
 
     window.requestAnimationFrame(predictLoop);
