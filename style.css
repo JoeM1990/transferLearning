@@ -1,6 +1,7 @@
 body {
     font-family: helvetica, arial, sans-serif;
     margin: 2em;
+    
   }
   
   h1 {
@@ -18,12 +19,12 @@ body {
     height: 480px;
   }
   
-  button {
-    padding: 10px;
+  /* button {
+    padding: 20px;
     float: left;
     margin: 5px 3px 5px 10px;
   }
-  
+   */
   ol {
     clear: both;
     margin-top: 90px;
@@ -35,4 +36,9 @@ body {
   
   #status {
     font-size:150%;
+  }
+
+  p{
+    color: white;
+    margin-left: 10px;
   }
