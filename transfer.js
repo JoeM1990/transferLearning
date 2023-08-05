@@ -1,6 +1,5 @@
-/**
- * @license
- */
+
+
 
 const STATUS = document.getElementById('status');
 const VIDEO = document.getElementById('webcam');
