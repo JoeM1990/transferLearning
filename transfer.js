@@ -86,8 +86,8 @@ function enableCam() {
     // getUsermedia parameters.
     const constraints = {
       video: true,
-      width: 640, 
-      height: 480 
+      width: 940, 
+      height: 550 
     };
 
     // Activate the webcam stream.
