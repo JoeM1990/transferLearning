@@ -38,8 +38,15 @@ let predict = false;
  * Loads the MobileNet model and warms it up so ready for use.
  **/
 async function loadMobileNetFeatureModel() {
-  const URL = 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
-  mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
+
+  //const URL = 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
+  
+  const URL = 'model/model.json';
+
+  //mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
+
+  mobilenet = await tf.loadGraphModel(URL);
+
   STATUS.innerText = 'Api Chargé avec success';
   
   // Warm up the model by passing zeros through it once.
