@@ -45,7 +45,7 @@ async function loadMobileNetFeatureModel() {
 
   //mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
 
-  mobilenet = await loadGraphModel(URL);
+  mobilenet = await tf.loadGraphModel(URL);
 
   STATUS.innerText = 'Api Chargé avec success';
   
