@@ -39,7 +39,7 @@ let predict = false;
  **/
 async function loadMobileNetFeatureModel() {
 
-  const URL = 'http://cors.io/?https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
+  const URL = 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
   
   //const URL = 'model.json';
 
