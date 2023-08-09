@@ -39,13 +39,13 @@ let predict = false;
  **/
 async function loadMobileNetFeatureModel() {
 
-  const URL = 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
+  //const URL = 'https://tfhub.dev/google/tfjs-model/imagenet/mobilenet_v3_small_100_224/feature_vector/5/default/1';
   
-  //const URL = 'model.json';
+  const URL = './model.json';
 
-  mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
+  //mobilenet = await tf.loadGraphModel(URL, {fromTFHub: true});
 
-  //mobilenet = await tf.loadGraphModel(URL);
+  mobilenet = await tf.loadGraphModel(URL);
 
   STATUS.innerText = 'Api Chargé avec success';
   
